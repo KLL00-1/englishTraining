@@ -40,10 +40,12 @@ async function getWord() {
     span.innerHTML =
       "Меня зовут Лев Кочетков я приветствую тебя в тренажере по знанию английских слов";
     span.style.fontSize = "30px";
+    span.style.paddingTop = "2%";
   }, 1500);
   setTimeout(() => {
     span.innerHTML = "Нажми 'Новое слово'и тренируй свои знания";
     span.style.fontSize = "30px";
+    span.style.paddingTop = "10%";
   }, 5500);
   setTimeout(() => {
     span.innerHTML = "Это база данных содержащая более 8000 слов!";
