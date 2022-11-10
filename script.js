@@ -11,6 +11,8 @@ async function getWord() {
   const answer = document.getElementById("answer");
   const getAnswer = document.getElementById("getAnswer");
 
+  console.log(responceInfo);
+
   button.addEventListener("click", function click() {
     index = Math.floor(Math.random() * 8028);
     span.innerHTML = responceInfo[index].en;
@@ -40,7 +42,7 @@ async function getWord() {
   });
   setTimeout(() => {
     span.innerHTML =
-      "Меня зовут Лев Кочетков я приветствую тебя в тренажере по знанию английских слов";
+      "Меня зовут Лев Кочетков! И я приветствую тебя в тренажере по английскому языку";
     span.style.fontSize = "30px";
     span.style.paddingTop = "5%";
   }, 1500);
