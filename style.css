@@ -62,7 +62,10 @@ span {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .shake {
-  animation: shake 0.5s linear;
+  animation: shake 0.4s linear;
+}
+.good {
+  background-color: green;
 }
 
 @keyframes shake {
