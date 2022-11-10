@@ -21,8 +21,10 @@ async function getWord() {
   button1.addEventListener("click", () => {
     if (input.value === responceInfo[index].ru) {
       span.innerHTML = "Верно!";
+      span.classList.add("good");
       setTimeout(() => {
         span.innerHTML = responceInfo[index].en;
+        span.classList.remove("good");
       }, 2000);
     } else if (input.value != responceInfo[index].ru) {
       span.innerHTML = "Неверно!";
@@ -61,5 +63,4 @@ async function getWord() {
   }, 14500);
 }
 getWord();
-
 
