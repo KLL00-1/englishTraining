@@ -19,14 +19,17 @@ async function getWord() {
   });
 
   button1.addEventListener("click", () => {
-    if (input.value === responceInfo[index].ru) {
+    if (
+      responceInfo[index].ru.search(input.value) == length &&
+      input.value != ""
+    ) {
       span.innerHTML = "Верно!";
       span.classList.add("good");
       setTimeout(() => {
         span.innerHTML = responceInfo[index].en;
         span.classList.remove("good");
       }, 2000);
-    } else if (input.value != responceInfo[index].ru) {
+    } else if (responceInfo[index].ru.search(input.value) != length) {
       span.innerHTML = "Неверно!";
       span.classList.add("shake");
       setTimeout(() => {
@@ -38,29 +41,3 @@ async function getWord() {
   getAnswer.addEventListener("click", () => {
     answer.value = responceInfo[index].ru;
   });
-  setTimeout(() => {
-    span.innerHTML =
-      "Меня зовут Лев Кочетков! И я приветствую тебя в тренажере по английскому языку";
-    span.style.fontSize = "30px";
-    span.style.paddingTop = "5%";
-  }, 1500);
-  setTimeout(() => {
-    span.innerHTML = "Нажми 'Новое слово'и тренируй свои знания";
-    span.style.fontSize = "30px";
-    span.style.paddingTop = "5%";
-  }, 5500);
-  setTimeout(() => {
-    span.innerHTML = "Это база данных содержащая более 8000 слов!";
-    span.style.fontSize = "30px";
-  }, 8500);
-  setTimeout(() => {
-    span.innerHTML = "Если не знаешь правильный ответ жми 'Правильный ответ'";
-    span.style.fontSize = "30px";
-  }, 11500);
-  setTimeout(() => {
-    span.innerHTML = "Удачи!";
-    span.style.fontSize = "45px";
-  }, 14500);
-}
-getWord();
-
