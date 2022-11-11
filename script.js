@@ -4,6 +4,8 @@ async function getWord() {
   );
   const responceInfo = await response.json();
 
+  console.log(responceInfo);
+
   const span = document.getElementById("word");
   const input = document.getElementById("input");
   const button = document.getElementById("button");
@@ -20,7 +22,7 @@ async function getWord() {
 
   button1.addEventListener("click", () => {
     if (
-      responceInfo[index].ru.search(input.value) == length &&
+      responceInfo[index].ru.lastIndexOf(input.value) != -1 &&
       input.value != ""
     ) {
       span.innerHTML = "Верно!";
