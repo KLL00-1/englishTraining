@@ -14,7 +14,7 @@ async function getWord() {
   const getAnswer = document.getElementById("getAnswer");
 
   button.addEventListener("click", function click() {
-    index = Math.floor(Math.random() * 8028);
+    index = Math.floor(Math.random() * responceInfo.length);
     span.innerHTML = responceInfo[index].en;
     answer.value = "";
     input.value = "";
